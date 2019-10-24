@@ -19,7 +19,8 @@ defmodule GenstageEx.Application do
       # {GenstageEx.Worker, arg}
 			worker(GenstageEx.Producer, [0]),
 			worker(GenstageEx.ProducerConsumer, []),
-			worker(GenstageEx.Consumer, [])
+			worker(GenstageEx.Consumer, [], id: 1),
+			worker(GenstageEx.Consumer, [], id: 2)
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
